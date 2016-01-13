@@ -1,0 +1,59 @@
+name:                som-examples
+version:             9.0
+synopsis:            Examples of how to use the "som" package.
+homepage:            https://github.com/mhwombat/som
+license:             PublicDomain
+license-file:        LICENSE
+author:              Amy de Buitléir
+maintainer:          amy@nualeargais.ie
+category:            Data
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable som-house-prices
+  main-is:             housePrices.hs
+  build-depends:       array ==0.5.*,
+                       base >=4.8 && <4.9,
+                       directory ==1.2.*,
+                       grid ==7.8.*,
+                       MonadRandom ==0.4.*,
+                       som ==9.0
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable sgm-house-prices
+  main-is:             housePricesSGM.hs
+  build-depends:       array ==0.5.*,
+                       base >=4.8 && <4.9,
+                       containers ==0.5.*,
+                       directory ==1.2.*,
+                       MonadRandom ==0.4.*,
+                       som ==9.0
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable som-colours
+  main-is:             colours.hs
+  build-depends:       array ==0.5.*,
+                       base >=4.8 && <4.9,
+                       bytestring ==0.10.*,
+                       colour ==2.3.*,
+                       diagrams-cairo ==1.3.*,
+                       diagrams-core ==1.3.*,
+                       diagrams-lib ==1.3.*,
+                       directory ==1.2.*,
+                       grid ==7.8.*,
+                       JuicyPixels ==3.2.*,
+                       MonadRandom ==0.4.*,
+                       som ==9.0,
+                       split ==0.2.*,
+                       vector ==0.11.*
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+
+
+-- You will probably also need:
+--   cabal install gtk2hs-buildtools
+--   sudo aptitude install libglib2.0-dev libcairo-dev libpango1.0-dev
